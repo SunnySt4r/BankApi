@@ -1,0 +1,28 @@
+spring:
+  liquibase:
+    change-log: classpath:/db/changelog/db-changelog.xml
+  datasource:
+    url: jdbc:postgresql://localhost:15432/database
+    username: user
+    password: password
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+
+server:
+  address: localhost
+  port: 8080
+
+logging:
+  level:
+    "liquibase": info
+
+token:
+  signing:
+    key:
+      932fa0953c8b0c9a90d05723ee8d700d0a768baddb8d678598d6879ce89f6737
+
+springdoc:
+  swagger-ui:
+    path: /swagger
